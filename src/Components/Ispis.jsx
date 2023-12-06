@@ -18,9 +18,18 @@ class Ispis extends Component {
         <p>Location: {user.location}</p>
         <p>Repositories:</p>
         <div>
-          {repos.map((repo) => (
-            <div key={repo.id}>{repo.name}</div>
-          ))}
+          <ul>
+            {repos.map((repo, index) => (
+              <li
+                key={repo.id}
+                style={{
+                  backgroundColor: index % 2 === 0 ? "lightgray" : "white",
+                }}
+              >
+                {repo.name}
+              </li>
+            ))}
+          </ul>
         </div>
         <Button onClick={onReset} variant="danger" className=" mt-3">
           Reset
