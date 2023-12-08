@@ -18,7 +18,7 @@ class Ispis extends Component {
         <p>Location: {user.location}</p>
         <p>Repositories:</p>
         <div>
-          <ul>
+          <ul style={{ listStyleType: "none" }}>
             {repos.map((repo, index) => (
               <li
                 key={repo.id}
